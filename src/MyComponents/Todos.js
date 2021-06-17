@@ -6,7 +6,7 @@ export const Todos = (props) => {
     minHeight: '70vh',
     margin: '40px auto'
   };
-  console.log("todos map :   ",props.todos)
+  // console.log("todos map :   ",props.todos)
   return (
     <div className='container' style={footerStyle}>
       <h3 className='my-3'>Todos List</h3>

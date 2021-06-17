@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Todo = ({ todo, onDelete, onTick }) => {
   let ck = todo.check ? 'defaultChecked' : '';
-  console.log('todo log:   ',todo)
+  // console.log('todo log:   ',todo)
   return (
     <>
       <div className='container my-3'>

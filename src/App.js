@@ -21,16 +21,16 @@ function App() {
   const onTick = (todo) => {
     let temp;
     temp = [...todos]
-    console.log('todo ontick1:   ', temp);
+    // console.log('todo ontick1:   ', temp);
     temp[todo.sno].check = !temp[todo.sno].check;
     setTodos(temp)
     localStorage.setItem('todos', JSON.stringify(temp));
-    console.log('todo ontick2:   ', temp);
-    console.log('todo ontick3:   ', temp);
+    // console.log('todo ontick2:   ', temp);
+    // console.log('todo ontick3:   ', temp);
   };
-  console.log('todos after ontick    ',todos)
+  // console.log('todos after ontick    ',todos)
   const onDelete = (todo) => {
-    // console.log('Deleting the data', todo);
+    // // console.log('Deleting the data', todo);
     // Deleting this way in react does not work unlike angular
     // let index = todos.indexOf(todo);
     // todos.splice(index, 1);
@@ -59,21 +59,21 @@ function App() {
       check: false
     };
 
-    // console.log('I am adding this todo', myTodo);
+    // // console.log('I am adding this todo', myTodo);
 
     setTodos([...todos, myTodo]);
   };
 
   
 
-  console.log('todos before use effect    ',todos)
+  // console.log('todos before use effect    ',todos)
 
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
-    console.log("useeffect called   ")
+    // console.log("useeffect called   ")
   }, [todos]);
 
-  console.log('todos after use effect    ',todos)
+  // console.log('todos after use effect    ',todos)
   return (
     <>
       <Router>

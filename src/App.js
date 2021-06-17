@@ -20,10 +20,10 @@ function App() {
 
   const onTick = (todo) => {
     let temp;
-    temp = [...todos]
+    temp = [...todos];
     // console.log('todo ontick1:   ', temp);
     temp[todo.sno].check = !temp[todo.sno].check;
-    setTodos(temp)
+    setTodos(temp);
     localStorage.setItem('todos', JSON.stringify(temp));
     // console.log('todo ontick2:   ', temp);
     // console.log('todo ontick3:   ', temp);
@@ -64,8 +64,6 @@ function App() {
     setTodos([...todos, myTodo]);
   };
 
-  
-
   // console.log('todos before use effect    ',todos)
 
   useEffect(() => {
@@ -80,18 +78,16 @@ function App() {
         <Header title='My Todo List' searchBar={false} />
 
         <Switch>
-          <Route
-            exact
-            path='/'
-            render={() => {
-              return (
-                <>
+          <Route exact path='/'>
+             {/* render={() => { */}
+            {/* //   return ( */}
+                 <>
                   <AddTodo addTodo={addTodo} />
-                  <Todos todos={todos} onDelete={onDelete} onTick={onTick} />
-                </>
-              );
-            }}
-          ></Route>
+                  <Todos todos={todos} onDelete={onDelete} onTick={onTick} /></>
+                {/* 
+              ); */}
+            {/* }} */}
+          </Route>
           <Route exact path='/about'>
             <About />
           </Route>

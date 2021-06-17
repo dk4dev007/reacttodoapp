@@ -78,7 +78,7 @@ function App() {
         <Header title='My Todo List' searchBar={false} />
 
         <Switch>
-          <Route exact path={'' || '/'}>
+          <Route exact path='/'>
              {/* render={() => { */}
             {/* //   return ( */}
                  <>

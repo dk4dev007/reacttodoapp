@@ -19,11 +19,14 @@ function App() {
   const [todos, setTodos] = useState(initTodo);
 
   const onTick = (todo) => {
-    console.log('todo ontick1:   ', todo);
-    setTodos(todos[todo.sno].check = !todos[todo.sno].check);
-    localStorage.setItem('todos', JSON.stringify(todos));
-    console.log('todo ontick2:   ', todo);
-    console.log('todo ontick3:   ', todos);
+    let temp;
+    temp = [...todos]
+    console.log('todo ontick1:   ', temp);
+    temp[todo.sno].check = !temp[todo.sno].check;
+    setTodos(temp)
+    localStorage.setItem('todos', JSON.stringify(temp));
+    console.log('todo ontick2:   ', temp);
+    console.log('todo ontick3:   ', temp);
   };
   console.log('todos after ontick    ',todos)
   const onDelete = (todo) => {

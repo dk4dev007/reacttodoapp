@@ -90,7 +90,7 @@ function App() {
               );
             }}
           ></Route>
-          <Route exact path='/about'>
+          <Route path='/about'>
             <About />
           </Route>
         </Switch>

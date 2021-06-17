@@ -79,15 +79,15 @@ function App() {
 
         <Switch>
           <Route exact path='/'>
-             {/* render={() => { */}
-            {/* //   return ( */}
-                 <>
-                  <AddTodo addTodo={addTodo} />
-                  <Todos todos={todos} onDelete={onDelete} onTick={onTick} />
-                  </>
-                {/* 
-              ); */}
-            {/* }} */}
+              render={() => {
+               return ( 
+                <>
+                <AddTodo addTodo={addTodo} />
+                <Todos todos={todos} onDelete={onDelete} onTick={onTick} />
+                </>
+                 
+              ); 
+              }}
           </Route>
           <Route exact path='/about'>
             <About />

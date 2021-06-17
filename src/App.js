@@ -78,17 +78,18 @@ function App() {
         <Header title='My Todo List' searchBar={false} />
 
         <Switch>
-          <Route exact path='/'
-              render={() => {
-               return ( 
+          <Route
+            exact
+            path='/'
+            render={() => {
+              return (
                 <>
-                <AddTodo addTodo={addTodo} />
-                <Todos todos={todos} onDelete={onDelete} onTick={onTick} />
+                  <AddTodo addTodo={addTodo} />
+                  <Todos todos={todos} onDelete={onDelete} onTick={onTick} />
                 </>
-                 
-              ); 
-              }}>
-          </Route>
+              );
+            }}
+          ></Route>
           <Route exact path='/about'>
             <About />
           </Route>

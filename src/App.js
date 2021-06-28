@@ -80,7 +80,7 @@ function App() {
         <Switch>
           <Route
             exact
-            path='/*'
+            path='/'
             render={() => {
               return (
                 <>
@@ -93,6 +93,18 @@ function App() {
           <Route path='/about'>
             <About />
           </Route>
+          <Route
+            exact
+            path='/*'
+            render={() => {
+              return (
+                <>
+                  <AddTodo addTodo={addTodo} />
+                  <Todos todos={todos} onDelete={onDelete} onTick={onTick} />
+                </>
+              );
+            }}
+          ></Route>
         </Switch>
 
         <Footer />

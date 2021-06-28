@@ -90,11 +90,10 @@ function App() {
               );
             }}
           ></Route>
-          <Route path='/about'>
+          <Route exact path='/about'>
             <About />
           </Route>
           <Route
-            exact
             path='/*'
             render={() => {
               return (
